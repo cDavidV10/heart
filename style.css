@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 80vh;
+}
+
+.title {
+  width: 25vw;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+}
+
+.heart-cont {
+  position: relative;
+  width: 20vw;
+  height: 20vw;
+  animation: pulse 1s infinite;
+}
+
+.heart {
+  position: absolute;
+  content: "";
+  left: 10vw;
+  top: 0;
+  width: 10vw;
+  height: 16vw;
+  background-color: #d00;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  border-radius: 5vw 5vw 0 0;
+  animation: heartColor 1s infinite;
+}
+
+.heart2 {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes heartColor {
+  0% {
+    background-color: #e00;
+  }
+}
